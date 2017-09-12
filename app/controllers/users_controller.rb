@@ -28,6 +28,8 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
+    puts 'HELLO PEOPLE OF EARTH'
+    puts params
     @user = User.new(user_params)
 
     if @user.save
