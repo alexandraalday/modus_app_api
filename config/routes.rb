@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :songs
+
   resources :users do
+  	resources :songs, only: [:create]
   	collection do
   		post '/login', to: 'users#login'
   	end
